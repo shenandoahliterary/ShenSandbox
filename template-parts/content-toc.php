@@ -43,9 +43,6 @@
                     &nbsp;▴&nbsp;
                     <a href="#comics">Comics</a>
                     &nbsp;▴&nbsp;
-                    <a href="#graybeal">Graybeal-Gowen Prize</a>
-                    &nbsp;▴&nbsp;
-                    <a href="#translations">Celebrating Trans Poets</a>
             </div>
         </div>
 
