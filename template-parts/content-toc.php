@@ -33,16 +33,17 @@
         <div class="row sticky-top genreNav-bar" style="background: #1C4777">
 
             <div class="col d-flex justify-content-between genreHeadings sticky-top" style="">
-                    <a href="#novel-excerpt">Novel Excerpts</a>
+                    <a href="#artist">Featured Artist</a>
                     &nbsp;▴&nbsp;
-                    <a href="#poetry">Poetry</a>
+                    <a href="#micro">Micro Nonfiction</a>
                     &nbsp;▴&nbsp;
                     <a href="#fiction">Fiction</a>
                     &nbsp;▴&nbsp;
-                    <a href="#flash">Flash Nonfiction</a>
+                    <a href="#poetry">Poetry</a>
                     &nbsp;▴&nbsp;
                     <a href="#comics">Comics</a>
                     &nbsp;▴&nbsp;
+                    <a href="#novel-excerpt">Novel Excerpts</a>
             </div>
         </div>
 
@@ -56,7 +57,7 @@
             <div class="row">
                 <div class="TOC-column text-start" style="padding-top: 3em">
                         <h3>
-                            Novel Excerpts
+                            Featured Artist
                         </h3>
                     </a>
                 </div>
@@ -150,8 +151,8 @@
             <div class="row"> <!-- opens row for sixth category -->
 
                 <div class="TOC-column">
-                    <h3>Poetry</h3>
-                    <h2>guest edited by Siew David Hii</h2>
+                    <h3>Micro Nonfiction</h3>
+                    <h2>guest edited by jj peña</h2>
                 </div>
             </div>
             <div class="row">
@@ -309,7 +310,7 @@
             <!-- start of third category -->
             <div class="row">
                     <div class="TOC-column">
-                       <h3>Flash Nonfiction</h3>
+                       <h3>Poetry</h3>
                     </div>
                 </div>
             <div class="row">
@@ -478,8 +479,7 @@
             <!-- opens row for fifth category -->
             <div class="row">
                 <div class="TOC-column">
-                    <h3>Graybeal-Gowen Prize for Virginia Poetry</h3>
-                    <h2> Judged by Oliver de la Paz</h2>
+                    <h3>Novel Excerpts</h3>
                 </div>
             </div>
             <div class="row">
@@ -642,8 +642,8 @@
 	<!--
             <p class="TOC-subheadings"><a href="https://shenandoahliterary.org/721/editors-note/">Editor&rsquo;s Note</a><br /><span class="author_name">Beth Staples</span></p>
     -->
-            <p class="TOC-subheadings"><a href="https://shenandoahliterary.org/722/masthead/">Masthead</a></p>
-            <p class="TOC-subheadings"><a href="https://shenandoahliterary.org/722/contributors/">List of Contributors</a></p>
+            <p class="TOC-subheadings"><a href="https://shenandoahliterary.org/731/masthead/">Masthead</a></p>
+            <p class="TOC-subheadings"><a href="https://shenandoahliterary.org/731/contributors/">List of Contributors</a></p>
     </div>
 
         <!--  Quote section -->
