@@ -59,6 +59,7 @@
                         <h3>
                             Featured Artist
                         </h3>
+                        <h2>Paul Wackers</h2>
                     </a>
                 </div>
             </div>
@@ -318,17 +319,17 @@
                     <?php
                         remove_all_filters('posts_orderby');
                         $flash_nonfiction_args = array(
-                            'category_name' => 'flash-nonfiction',
+                            'category_name' => 'poetry',
                             'order' => 'ASC',
                             'meta_key' => 'TOC_order',
                             'orderby' => 'meta_value_num',
                             'meta_type' => 'NUMERIC',
                             'nopaging' => 'true',
                         );
-                        $flash_nonfiction_loop = new WP_Query($flash_nonfiction_args);
+                        $poetry_loop = new WP_Query($poetry_args);
                         $authornames = array();
 
-                        while ($flash_nonfiction_loop->have_posts()) : $flash_nonfiction_loop->the_post();
+                        while ($poetry_loop->have_posts()) : $poetry_loop->the_post();
                             $this_author= get_post_meta($post->ID, 'author_lastname', true);
                             $this_author_id =get_the_author_meta('ID');
                             $authornames[$this_author_id] = $this_author;
@@ -341,7 +342,7 @@
 
                         foreach ($authornames as $author_id=>$author_lastname) {
                             $args = array(
-                                'category_name' => 'flash-nonfiction',
+                                'category_name' => 'poetry',
                                 'author' => $author_id,
                                 'orderby' => 'date',
                                 'order' => 'asc',
@@ -349,14 +350,14 @@
                             );
 
                             //start WP loop
-                            $flash_nonfiction_loop_single = new WP_Query($args);
+                            $poetry_loop_single = new WP_Query($args);
 
                             $i = 0;
 
                             //open paragraph for title(s)/author
                             echo "<p>";
-                            while ($flash_nonfiction_loop_single->have_posts()) :
-                                $flash_nonfiction_loop_single->the_post();
+                            while ($poetry_loop_single->have_posts()) :
+                                $poetry_loop_single->the_post();
                                 //for each author, print title,  author
 
                     ?>
@@ -484,69 +485,83 @@
             </div>
             <div class="row">
 
-                    <?php
-                    remove_all_filters('posts_orderby');
-                    $graybeal_args = array(
-                        'category_name' => 'graybeal',
-                        'order' => 'ASC',
-                        'meta_key' => 'TOC_order',
-                        'orderby' => 'meta_value_num',
-                        'meta_type' => 'NUMERIC',
-                        'nopaging' => 'true',
+            <?php
+                remove_all_filters('posts_orderby');
+                $novel_excerpt_args = array(
+                    'category_name' => 'novel-excerpt',
+                    'order' => 'ASC',
+                    'meta_key' => 'TOC_order',
+                    'orderby' => 'meta_value_num',
+                    'meta_type' => 'NUMERIC',
+                    'nopaging' => 'true',
+                );
+                $novel_excerpt_loop = new WP_Query($novel_excerpt_args);
+                $authornames = array();
 
-                    );
-                    $graybeal_loop = new WP_Query($graybeal_args);
-                        $authornames = array();
-
-                            while ($graybeal_loop->have_posts()) : $graybeal_loop->the_post();
-                                $this_author= get_post_meta($post->ID, 'author_lastname', true);
-                                $this_author_id =get_the_author_meta('ID');
-                                $authornames[$this_author_id] = $this_author;
+                while ($novel_excerpt_loop->have_posts()) : $novel_excerpt_loop->the_post();
+                    $this_author= get_post_meta($post->ID, 'author_lastname', true);
+                    $this_author_id =get_the_author_meta('ID');
+                    $authornames[$this_author_id] = $this_author;
 
                     //print statement of title and author just below worked but put each work and author separately
+
+                endwhile;
+
+                //group posts by author
+
+                foreach ($authornames as $author_id=>$author_lastname) {
+                    $args = array(
+                        'category_name' => 'novel-excerpt',
+                        'author' => $author_id,
+                        'orderby' => 'date',
+                        'order' => 'asc',
+                        'nopaging' => 'true'
+                    );
+
+                    //start WP loop
+                    $novel_excerpt_loop_single = new WP_Query($args);
+
+                    $i = 0;
+
+                    //open paragraph for title(s)/author
+                    echo "<p>";
+                    while ($novel_excerpt_loop_single->have_posts()) :
+                        $novel_excerpt_loop_single->the_post();
+                        //for each author, print title,  author
+
+                        ?>
+                        <a href="<?php the_permalink(); ?>">
+
+                            <?php the_title(); ?>
+                        </a><br/>
+                        <?php
+                        //check for author's note
+
+                        $custom_fields = get_post_custom();
+                        $has_author_note = $custom_fields['has_author_note'];
+
+                        $i++;
+
+                    endwhile;
+                    $custom_fields_test = get_post_custom();
+                    $has_author_note_test = $custom_fields_test['has_author_note'];
+
+                    if (! empty($has_author_note)) {
+                        $author_note_url = site_url();
+
+                        //echo "test: $has_author_note_test[0]";
+                        echo <<<URLLINK
+            
+                                <a href="$author_note_url/$has_author_note[0]/">Author's Note</a><br />
+                                URLLINK;
+                    }
                     ?>
 
+                    <span class="author_name"><?php the_author(); ?> </span>
                     <?php
-                            endwhile;
-
-                    //below groups posts by author
-
-                        foreach ($authornames as $author_id=>$author_lastname) {
-                                $args = array(
-                            'category_name' => 'graybeal',
-                            'author' => $author_id,
-                            'orderby' => 'date',
-                            'order' => 'asc',
-                            'nopaging' => 'true'
-                            );
-                    ?>
-                    <?php
-                            $graybeal_loop_single = new WP_Query($args);
-
-                            $i = 0;
-                            //open paragraph for title(s)/author
-                            echo "<p>";
-                                while ($graybeal_loop_single->have_posts()) :
-                                    $graybeal_loop_single->the_post();
-                                //for each author, print title, title, author
-                    ?>
-
-                    <a href="<?php the_permalink(); ?>">
-
-                    <?php the_title(); ?>
-
-                    </a><br />
-
-                    <?php
-                            $i++;
-                            endwhile;
-                            //print author outside of the loop
-                    ?>
-                            <span class="author_name"><?php the_author(); ?> </span>
-                    <?php
-                            wp_reset_postdata();
-                        }
-                    ?>
+                    wp_reset_postdata();
+                }
+                ?>
 
 
             </div>
