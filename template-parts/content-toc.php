@@ -573,7 +573,6 @@
 
 
 
-            <span class="text-center p-section-break">▴&nbsp;▴&nbsp;▴</span>
 
         </div> <!-- closes column -->
 
