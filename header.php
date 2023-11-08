@@ -20,9 +20,7 @@
 <link rel="stylesheet" href="https://use.typekit.net/nci7nxi.css">
 <link rel="stylesheet" href="style.css">
 	<?php wp_head(); ?>
-	<!-- 
-	<script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/d3fb306d3e3ad334647dfe1e3/ae9b8e29d4b3f84801343e0b8.js");</script>
--->
+	
 </head>
 
 <body <?php body_class(); ?>>
@@ -43,12 +41,12 @@
 		<div class="row nav-bar-row" style="margin-top:.25vw; padding-top:.5vw">
 			<div class="col-md-4">
 				<div class="volumeIssueBanner" style="padding-left: 6vw">
-					Volume 72, Number 2 &middot; Spring 2023
+					Volume 73, Number 1 &middot; Fall 2023
 				</div>
 			</div>
 
 			<div class="d-flex flex-nowrap col-md-8 float-md-end nav-bar" role="navigation">
-				<a class="nav-link" style="padding-right:2.3vw" href="https://shenandoahliterary.org/722/#toc">Current Issue</a>
+				<a class="nav-link" style="padding-right:2.3vw" href="https://shenandoahliterary.org/731/#toc">Current Issue</a>
 				<a class="nav-link" style="padding-right:2.3vw" href="https://shenandoahliterary.org/about/">About</a>
 				<a class="nav-link" style="padding-right:2.3vw" href="https://shenandoahliterary.org/issues/">Archive</a>
 				<a class="nav-link" style="padding-right:2.3vw" href="https://shenandoahliterary.org/submissions/">Submit</a>
