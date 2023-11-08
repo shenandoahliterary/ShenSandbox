@@ -69,17 +69,17 @@
                 <?php
                 remove_all_filters('posts_orderby');
                 $novel_excerpt_args = array(
-                    'category_name' => 'novel-excerpt',
+                    'category_name' => 'conversations',
                     'order' => 'ASC',
                     'meta_key' => 'TOC_order',
                     'orderby' => 'meta_value_num',
                     'meta_type' => 'NUMERIC',
                     'nopaging' => 'true',
                 );
-                $novel_excerpt_loop = new WP_Query($novel_excerpt_args);
+                $conversations_loop = new WP_Query($conversations_args);
                 $authornames = array();
 
-                while ($novel_excerpt_loop->have_posts()) : $novel_excerpt_loop->the_post();
+                while ($conversations_loop->have_posts()) : $conversations_loop->the_post();
                     $this_author= get_post_meta($post->ID, 'author_lastname', true);
                     $this_author_id =get_the_author_meta('ID');
                     $authornames[$this_author_id] = $this_author;
@@ -100,14 +100,14 @@
                     );
 
                     //start WP loop
-                    $novel_excerpt_loop_single = new WP_Query($args);
+                    $conversations_loop_single = new WP_Query($args);
 
                     $i = 0;
 
                     //open paragraph for title(s)/author
                     echo "<p>";
-                    while ($novel_excerpt_loop_single->have_posts()) :
-                        $novel_excerpt_loop_single->the_post();
+                    while ($conversations_loop_single->have_posts()) :
+                        $conversations_loop_single->the_post();
                         //for each author, print title,  author
 
                         ?>
@@ -145,7 +145,7 @@
                 ?>
             </div>
             <!-- close first category -->
-<a id="poetry"></a>
+<a id="micro"></a>
             <span class="text-center p-section-break">▴&nbsp;▴&nbsp;▴</span>
 
             <!-- opens row for sixth category -->
@@ -305,7 +305,7 @@
                             </div>
                         <!-- close second category row -->
 
-            <div id="flash"></div>
+            <div id="poetry"></div>
             <span class="text-center p-section-break">▴&nbsp;▴&nbsp;▴</span>
 
             <!-- start of third category -->
@@ -474,7 +474,7 @@
                 </div>
             <!-- close fourth category row -->
 
-            <div id="graybeal"></div>
+            <div id="novel-excerpt"></div>
         	<span class="text-center p-section-break">▴&nbsp;▴&nbsp;▴</span>
 
             <!-- opens row for fifth category -->
