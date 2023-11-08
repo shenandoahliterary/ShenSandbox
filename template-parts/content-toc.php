@@ -318,7 +318,7 @@
 <!--                    <p id="fiction">-->
                     <?php
                         remove_all_filters('posts_orderby');
-                        $flash_nonfiction_args = array(
+                        $poetry_args = array(
                             'category_name' => 'poetry',
                             'order' => 'ASC',
                             'meta_key' => 'TOC_order',
