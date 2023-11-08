@@ -233,7 +233,7 @@
             <div class="row"> <!-- opens row for second category -->
 
                 <div class="TOC-column">
-                    <h3>Fiction</h3>
+                    <h3>Short Stories</h3>
                 </div>
             </div>
                 <div class="row">
