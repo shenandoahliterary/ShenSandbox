@@ -570,82 +570,8 @@
             <a id="translations"></a>
             <span class="text-center p-section-break">▴&nbsp;▴&nbsp;▴</span>
 
-            <!-- opens row for seventh category -->
-            <div class="row"> <!-- opens row for seventh category -->
 
-                <div class="TOC-column">
-                    <h3>Celebrating Trans Poets from Puerto Rico</h3>
-                </div>
-            </div>
-            <div class="row">
 
-                <?php
-                remove_all_filters('posts_orderby');
-                $translations_args = array(
-                    'category_name' => 'translations',
-                    'order' => 'ASC',
-                    'meta_key' => 'TOC_order',
-                    'orderby' => 'meta_value_num',
-                    'meta_type' => 'NUMERIC',
-                    'nopaging' => 'true',
-
-                );
-                $translations_loop = new WP_Query($translations_args);
-                $authornames = array();
-
-                while ($translations_loop->have_posts()) : $translations_loop->the_post();
-                    $this_author= get_post_meta($post->ID, 'author_lastname', true);
-                    $this_author_id =get_the_author_meta('ID');
-                    $authornames[$this_author_id] = $this_author;
-
-                    //print statement of title and author just below worked but put each work and author separately
-                    ?>
-
-                <?php
-                endwhile;
-
-                //below groups posts by author
-
-                foreach ($authornames as $author_id=>$author_lastname) {
-                    $args = array(
-                        'category_name' => 'translations',
-                        'author' => $author_id,
-                        'orderby' => 'date',
-                        'order' => 'asc',
-                        'nopaging' => 'true'
-                    );
-                    ?>
-                    <?php
-                    $translations_loop_single = new WP_Query($args);
-
-                    $i = 0;
-                    //open paragraph for title(s)/author
-                    echo "<p>";
-                    while ($translations_loop_single->have_posts()) :
-                        $translations_loop_single->the_post();
-                        //for each author, print title, title, author
-                        ?>
-
-                        <a href="<?php the_permalink(); ?>">
-
-                            <?php the_title(); ?>
-
-                        </a><br />
-
-                        <?php
-                        $i++;
-                    endwhile;
-                    //print author outside of the loop
-                    ?>
-                    <span class="author_name"><?php the_author(); ?> </span>
-
-                    <?php
-                    wp_reset_postdata();
-                }
-                ?>
-
-            </div>
-            <!-- close seventh category row -->
 
             <span class="text-center p-section-break">▴&nbsp;▴&nbsp;▴</span>
 
