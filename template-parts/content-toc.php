@@ -92,7 +92,7 @@
 
                 foreach ($authornames as $author_id=>$author_lastname) {
                     $args = array(
-                        'category_name' => 'novel-excerpt',
+                        'category_name' => 'conversations',
                         'author' => $author_id,
                         'orderby' => 'date',
                         'order' => 'asc',
