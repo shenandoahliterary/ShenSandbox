@@ -10,9 +10,9 @@
 <section class="container">
     <div class="row cover-row d-flex justify-content-center">
 
-       <img style="width: 90vw; height: auto; padding-right: 1.25vw" draggable="false" src="<?php echo get_stylesheet_directory_uri(); ?>/banner.png" alt="" itemprop="">
+       <img style="width: 90vw; height: auto; padding-right: 1.25vw" draggable="false" src="<?php echo get_stylesheet_directory_uri(); ?>/cover-image-cropped.jpg" alt="" itemprop="">
 
-       <p class="d-flex justify-content-center" ><em></em> light study, &nbsp;<a href="https://www.aaronturner.studio/">Aaron Turner</a>.</p>
+       <p class="d-flex justify-content-center" ><em></em> detail, Yellow Studio, Acrylic and spray paint on canvas, 50” x 60”, 2017, &nbsp;<a href="https://www.paulwackers.com/">Paul Wackers</a>.</p>
 
 <!--
         <div class="col-4" style="left-margin: 4vw; z-index: 1">
