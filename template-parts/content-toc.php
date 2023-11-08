@@ -68,7 +68,7 @@
 
                 <?php
                 remove_all_filters('posts_orderby');
-                $novel_excerpt_args = array(
+                $conversations_args = array(
                     'category_name' => 'conversations',
                     'order' => 'ASC',
                     'meta_key' => 'TOC_order',
@@ -160,7 +160,7 @@
 
                 <?php
                 remove_all_filters('posts_orderby');
-                $poetry_args = array(
+                $micro_args = array(
                     'category_name' => 'micro',
                     'order' => 'ASC',
                     'meta_key' => 'TOC_order',
