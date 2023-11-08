@@ -161,7 +161,7 @@
                 <?php
                 remove_all_filters('posts_orderby');
                 $poetry_args = array(
-                    'category_name' => 'nonfiction',
+                    'category_name' => 'micro',
                     'order' => 'ASC',
                     'meta_key' => 'TOC_order',
                     'orderby' => 'meta_value_num',
@@ -169,10 +169,10 @@
                     'nopaging' => 'true',
 
                 );
-                $poetry_loop = new WP_Query($poetry_args);
+                $micro_loop = new WP_Query($micro_args);
                 $authornames = array();
 
-                while ($poetry_loop->have_posts()) : $poetry_loop->the_post();
+                while ($micro_loop->have_posts()) : $micro_loop->the_post();
                     $this_author= get_post_meta($post->ID, 'author_lastname', true);
                     $this_author_id =get_the_author_meta('ID');
                     $authornames[$this_author_id] = $this_author;
@@ -187,7 +187,7 @@
 
                 foreach ($authornames as $author_id=>$author_lastname) {
                     $args = array(
-                        'category_name' => 'poetry',
+                        'category_name' => 'micro',
                         'author' => $author_id,
                         'orderby' => 'date',
                         'order' => 'asc',
@@ -195,13 +195,13 @@
                     );
                     ?>
                     <?php
-                    $poetry_loop_single = new WP_Query($args);
+                    $micro_loop_single = new WP_Query($args);
 
                     $i = 0;
                     //open paragraph for title(s)/author
                     echo "<p>";
-                    while ($poetry_loop_single->have_posts()) :
-                        $poetry_loop_single->the_post();
+                    while ($micro_loop_single->have_posts()) :
+                        $micro_loop_single->the_post();
                         //for each author, print title, title, author
                         ?>
 
