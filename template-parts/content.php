@@ -94,7 +94,6 @@ TRIGGERWARNINGTEXT;
 	<hr>
 	<?php shenAleph_filter_add_bio(); ?>
 	<section class="workAuthorBio"><?php the_author_meta('description') ?></section>
-	<section class="workAuthorBio"><?php my_custom_author_bio() ?></section>
 	<!-- add 2nd author bio -->
 	<?php
 
