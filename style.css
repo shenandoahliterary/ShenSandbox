@@ -526,6 +526,8 @@ line-height: 1.25rem;
 margin-bottom: 1.5rem;
 }
 
+ 
+
 p.feature-subheading {
 	font-size: 1.2rem !important;
 }
@@ -882,11 +884,11 @@ p.adjust-byline-up {
 	text-indent: 0 !important;
 }
 
-section.workAuthorBio strong {
+workAuthorBio strong {
 	color: #df6348;
 }
 
-section.workAuthorBio a {
+workAuthorBio a {
 	text-decoration: underline;
 
 }
