@@ -386,7 +386,13 @@ if (! empty($my_custom_field)) {
 
 
 
-
+/**
+ * Allow HTML tags in author bio/description.
+ * This applies the wpautop function to the author description,
+ * which automatically adds paragraph tags to text and preserves line breaks,
+ * and also allows other HTML tags to be used.
+ */
+add_filter('get_the_author_description', 'wpautop');
 
 
 
