@@ -885,7 +885,7 @@ p.adjust-byline-up {
 }
 
 .workAuthorBio strong {
-	color: #df6348;
+	color: #df6348 !important;
 }
 
 .workAuthorBio a {
