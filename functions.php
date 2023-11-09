@@ -237,6 +237,14 @@ function shenAleph_stanza_break($text) {
 
 add_filter('the_content', 'shenAleph_stanza_break');
 
+/**
+ * Allow HTML tags in author bio/description.
+ * This applies the wpautop function to the author description,
+ * which automatically adds paragraph tags to text and preserves line breaks,
+ * and also allows other HTML tags to be used.
+ */
+add_filter('get_the_author_meta_description', 'wpautop');
+
 
 /******************************************
 * Handles multiple authors per post
@@ -386,13 +394,7 @@ if (! empty($my_custom_field)) {
 
 
 
-/**
- * Allow HTML tags in author bio/description.
- * This applies the wpautop function to the author description,
- * which automatically adds paragraph tags to text and preserves line breaks,
- * and also allows other HTML tags to be used.
- */
-add_filter('get_the_author_meta_description', 'wpautop');
+
 
 
 
