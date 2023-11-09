@@ -1515,6 +1515,7 @@ a:hover, a:active {
 
 .text-full-justify {
 	text-align: justify !important;
+	text-justify: auto;
 
 }
 
