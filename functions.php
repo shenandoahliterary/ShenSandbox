@@ -245,6 +245,11 @@ add_filter('the_content', 'shenAleph_stanza_break');
  */
 add_filter('get_the_author_meta_description', 'wpautop');
 
+function test_function() {
+    echo 'Test function is working!';
+}
+add_action('wp_footer', 'test_function');
+
 
 /******************************************
 * Handles multiple authors per post
