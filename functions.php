@@ -237,7 +237,35 @@ function shenAleph_stanza_break($text) {
 
 add_filter('the_content', 'shenAleph_stanza_break');
 
+/**
+ * Allow HTML tags in author bio/description.
+ * This applies the wpautop function to the author description,
+ * which automatically adds paragraph tags to text and preserves line breaks,
+ * and also allows other HTML tags to be used.
+ */
+add_filter('get_the_author_meta_description', 'wpautop');
 
+
+/**
+ * Modify the list of allowed HTML tags in user descriptions.
+ * This function adds the 'strong' tag to the list of allowed tags
+ * when the 'user_description' context is being filtered.
+ */
+
+function my_kses_allowed_html($tags, $context) {
+    if ($context == 'user_description') {
+        $tags['strong'] = array();
+    }
+    return $tags;
+}
+
+// Apply the filter to modify allowed HTML tags
+add_filter('wp_kses_allowed_html', 'my_kses_allowed_html', 10, 2);
+
+function my_custom_author_bio() {
+    $author_bio = get_the_author_meta('description');
+    echo wp_kses_post(wpautop($author_bio));
+}
 
 
 
