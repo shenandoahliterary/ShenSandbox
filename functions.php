@@ -262,6 +262,13 @@ function my_kses_allowed_html($tags, $context) {
 // Apply the filter to modify allowed HTML tags
 add_filter('wp_kses_allowed_html', 'my_kses_allowed_html', 10, 2);
 
+//test
+function my_custom_author_bio() {
+    $author_bio = get_the_author_meta('description');
+    echo wpautop($author_bio);
+}
+
+
 
 /******************************************
 * Handles multiple authors per post
