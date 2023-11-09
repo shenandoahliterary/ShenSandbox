@@ -392,7 +392,7 @@ if (! empty($my_custom_field)) {
  * which automatically adds paragraph tags to text and preserves line breaks,
  * and also allows other HTML tags to be used.
  */
-add_filter('get_the_author_description', 'wpautop');
+add_filter('get_the_author_meta_description', 'wpautop');
 
 
 
