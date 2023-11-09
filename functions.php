@@ -404,7 +404,8 @@ if (! empty($my_custom_field)) {
  ?>
  <section class="workAuthorBio translatorBio">
  <?php
-						 echo "$author_name->description </section>";
+						// echo "$author_name->description </section>";
+						 echo $author_name->description . "</section>";
 					 }
 				 }
 					 else {echo "No authors found";}
