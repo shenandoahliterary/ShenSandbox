@@ -884,11 +884,11 @@ p.adjust-byline-up {
 	text-indent: 0 !important;
 }
 
-workAuthorBio strong {
+.workAuthorBio strong {
 	color: #df6348;
 }
 
-workAuthorBio a {
+.workAuthorBio a {
 	text-decoration: underline;
 
 }
