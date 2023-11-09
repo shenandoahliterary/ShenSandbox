@@ -246,6 +246,21 @@ add_filter('the_content', 'shenAleph_stanza_break');
 add_filter('get_the_author_meta_description', 'wpautop');
 
 
+/**
+ * Modify the list of allowed HTML tags in user descriptions.
+ * This function adds the 'strong' tag to the list of allowed tags
+ * when the 'user_description' context is being filtered.
+ */
+
+function my_kses_allowed_html($tags, $context) {
+    if ($context == 'user_description') {
+        $tags['strong'] = array();
+    }
+    return $tags;
+}
+
+// Apply the filter to modify allowed HTML tags
+add_filter('wp_kses_allowed_html', 'my_kses_allowed_html', 10, 2);
 
 
 /******************************************
