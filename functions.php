@@ -386,11 +386,20 @@ if (! empty($my_custom_field)) {
  <?php
 
 						//next line is a test
-						$author_description = get_the_author_meta('description', $author_name->ID);
+						//$author_description = get_the_author_meta('description', $author_name->ID);
 						// echo "$author_name->description </section>";
 						// echo $author_name->description . "</section>";
 						//next line is a test
-						echo $author_description . "</section>";
+						//echo $author_description . "</section>";
+
+						foreach ($author_names as $author_name) {
+							$author_description = get_user_meta($author_name->ID, 'description', true);
+							echo '<section class="workAuthorBio translatorBio">';
+							echo 'Raw description: ' . htmlspecialchars($author_description) . "<br/>";
+							echo 'Processed description: ' . $author_description . "</section>";
+						}
+
+
 					 }
 				 }
 					 else {echo "No authors found";}
