@@ -1514,7 +1514,7 @@ a:hover, a:active {
 }
 
 .text-full-justify {
-	text-align: justify;
+	text-align: justify !important;
 
 }
 
