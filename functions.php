@@ -384,8 +384,13 @@ if (! empty($my_custom_field)) {
  ?>
  <section class="workAuthorBio translatorBio">
  <?php
+
+						//next line is a test
+						$author_description = get_the_author_meta('description', $author_name->ID);
 						// echo "$author_name->description </section>";
-						 echo $author_name->description . "</section>";
+						// echo $author_name->description . "</section>";
+						//next line is a test
+						echo $author_description . "</section>";
 					 }
 				 }
 					 else {echo "No authors found";}
