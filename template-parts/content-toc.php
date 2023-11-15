@@ -296,7 +296,15 @@
                                         endwhile;
                                         //print author outside of the loop
                                 ?>
-                                        <span class="author_name"><?php the_author(); ?> </span>
+                                        <span class="author_name"><?php the_author(); ?> </span><br />
+                                        <?php
+//add translator byline
+$custom_fields = get_post_custom();
+
+$my_custom_field = $custom_fields['translator_byline'];
+echo "$my_custom_field[0]";
+
+?>
                                 <?php
                                             wp_reset_postdata();
                                         }
@@ -560,7 +568,7 @@
                     <span class="author_name"><?php the_author(); ?> </span><br />
 
                     <?php
-//testing translator byline
+//add translator byline
 $custom_fields = get_post_custom();
 
 $my_custom_field = $custom_fields['translator_byline'];
