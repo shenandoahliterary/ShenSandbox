@@ -543,6 +543,7 @@
                         $i++;
 
                     endwhile;
+                    shenAleph_filter_second_author();
                     $custom_fields_test = get_post_custom();
                     $has_author_note_test = $custom_fields_test['has_author_note'];
 
