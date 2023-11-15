@@ -129,6 +129,52 @@ TRIGGERWARNINGTEXT;
 
 	    }
 }
+
+// if does not have tag translated-by-author, then add translatorBio  
+
+
+if ( has_tag('translated-by-author') ) {
+
+}
+
+else {
+
+$custom_fields = get_post_custom();
+
+$my_custom_field = $custom_fields['translator_lastname'];
+
+  foreach ( $my_custom_field as $key => $value ) {
+  	//echo $key . " => " . $value . "<br />";
+
+
+      $args_authors = array(
+
+                   'meta_key' => "last_name",
+                   'meta_value' => "$value",
+                   'meta_compare' => 'LIKE'
+                 );
+        $author_loop = new WP_User_Query($args_authors);
+        $author_names = $author_loop->get_results();
+
+
+        if (! empty($author_names)) {
+
+          foreach ($author_names as $author_name) {
+?>
+<section class="workAuthorBio translatorBio">
+<?php
+            echo "$author_name->description </section>";
+          }
+        }
+          else {echo "No authors found";}
+
+
+    }
+}
+
+
+
+
 //extra content that might appears below bio
 $extra_content = $custom_fields['extra_content'];
 if (! empty($extra_content)) {
