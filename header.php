@@ -34,7 +34,7 @@
                 <img style="width:8vw; height:auto; padding-top:4vw; padding-right: 1.25vw" src="<?php echo get_stylesheet_directory_uri(); ?>/Shenandoah-1600.jpg" alt="Shenandoah Logo" itemprop="logo">
             </p>
             <p id="typelogo">
-				<a href="https://shenandoahLiterary.org/722/" style="color: rgb(103,173,168)">Shenandoah</a>
+				<a href="https://shenandoahLiterary.org/731/" style="color: rgb(103,173,168)">Shenandoah</a>
 			</p>
 		</div>
 
