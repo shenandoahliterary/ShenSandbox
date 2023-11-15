@@ -557,7 +557,7 @@
                     }
                     ?>
 
-                    <span class="author_name"><?php the_author(); ?> </span>
+                    <span class="author_name"><?php the_author(); ?> </span><br />
 
                     <?php
 //testing translator byline
