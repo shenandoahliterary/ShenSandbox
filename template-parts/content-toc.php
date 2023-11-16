@@ -30,7 +30,7 @@
 
 </section>
 
-        <div class="row sticky-top genreNav-bar" style="background: #1C4777">
+        <div class="row sticky-top genreNav-bar" style="background: #6b9e38">
 
             <div class="col d-flex justify-content-between genreHeadings sticky-top" style="">
                     <a href="#artist">Featured Artist</a>
