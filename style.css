@@ -893,6 +893,10 @@ p.adjust-byline-up {
 
 }
 
+.contributor-page-bio {
+	font-size: 1.25rem;
+}
+
 .contributor-page-bio strong {
 	color: #6b9e38;
 }
