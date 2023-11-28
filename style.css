@@ -894,7 +894,7 @@ p.adjust-byline-up {
 }
 
 .contributor-page-bio {
-	font-size: 1.25rem;
+	font-size: 1.25rem !important;
 }
 
 .contributor-page-bio strong {
