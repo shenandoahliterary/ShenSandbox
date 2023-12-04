@@ -863,6 +863,17 @@ p.adjust-byline-up {
 		 text-indent: 0!important;
  }
 
+ .dropcapsJustify {
+box-sizing: content-box;
+float:left;
+color: #464646;
+font-size: 6.25rem; /* was 6.25 */
+line-height: 2rem;  /* change to accomodate full justify text */
+padding-right: 0;
+padding-left: 0;
+text-indent: 0!important;
+}
+
 .dropcaps::after {
 	letter-spacing: -1rem;
 }
