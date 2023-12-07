@@ -12,7 +12,7 @@
 
        <img style="width: 90vw; height: auto; padding-right: 1.25vw" draggable="false" src="http://shenandoahliterary.org/731/files/2023/11/shenandoah-73.1-cover-opt.png" alt="" itemprop="">
 
-       <p class="d-flex justify-content-center" ><em></em> detail,  &nbsp;<em>Yellow Studio</em>, Acrylic and spray paint on canvas, 50” x 60”, 2017, &nbsp;<a href="https://www.paulwackers.com/" target="_blank">Paul Wackers</a></p>
+       <p class="d-flex justify-content-center" ><em></em> detail,&nbsp;<em>Yellow Studio</em>, Acrylic and spray paint on canvas, 50” x 60”, 2017, &nbsp;<a href="https://www.paulwackers.com/" target="_blank">Paul Wackers</a></p>
 
 <!--
         <div class="col-4" style="left-margin: 4vw; z-index: 1">
