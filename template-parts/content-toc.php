@@ -663,7 +663,7 @@ echo "$my_custom_field[0]";
 			<?php
 			$args = array(
 			//    'category_name'         => 'feature',
-				'category_name'         => "What's in My Desk,Conversations",
+				'category_name'         => "What's in My Desk",
 
 			);
 			$category_posts = new WP_Query($args);
