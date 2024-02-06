@@ -41,7 +41,7 @@
 		<div class="row nav-bar-row" style="margin-top:.25vw; padding-top:.5vw">
 			<div class="col-md-4">
 				<div class="volumeIssueBanner" style="padding-left: 6vw">
-					Volume 73, Number 1 &middot; Fall 2023
+					Volume xx, Number x &middot; Fall xxxx
 				</div>
 			</div>
 
