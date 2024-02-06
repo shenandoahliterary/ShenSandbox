@@ -40,9 +40,10 @@
 
 		<div class="row nav-bar-row" style="margin-top:.25vw; padding-top:.5vw">
 			<div class="col-md-4">
-				<div class="volumeIssueBanner" style="padding-left: 6vw">
-					Volume xx, Number x &middot; Fall xxxx
-				</div>
+			<div class="volumeIssueBanner" style="padding-left: 6vw">
+   				 <?php echo get_theme_mod('volume_issue_text', 'Volume xx, Number x · Fall xxxx'); ?>
+</div>
+
 			</div>
 
 			<div class="d-flex flex-nowrap col-md-8 float-md-end nav-bar" role="navigation">
