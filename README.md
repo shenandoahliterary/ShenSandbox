@@ -1,10 +1,8 @@
 
 
-ShenAleph2.4
+ShenSandbox
 ===
 
-This is the WP theme for Shenandoah, generated from
-ShenAleph 2.2 theme.
 
 This theme originally based on the starter theme called `_s`, or `underscores`.
 
