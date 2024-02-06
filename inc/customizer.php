@@ -25,6 +25,30 @@ function shenAleph_customize_register( $wp_customize ) {
 			'render_callback' => 'shenAleph_customize_partial_blogdescription',
 		) );
 	}
+//
+// Add your new Section, Setting, and Control here
+$wp_customize->add_section('mytheme_new_section_name', array(
+	'title'      => __('Volume and Issue', 'mytheme'),
+	'priority'   => 30,
+));
+
+$wp_customize->add_setting('volume_issue_text', array(
+	'default'   => 'Volume xx, Number x · Fall xxxx',
+	'transport' => 'refresh',
+));
+
+$wp_customize->add_control(new WP_Customize_Control(
+	$wp_customize,
+	'custom_volume_issue_text',
+	array(
+		'label'      => __('Volume Issue Text', 'mytheme'),
+		'section'    => 'mytheme_new_section_name',
+		'settings'   => 'volume_issue_text',
+		'type'       => 'text'
+	)
+));
+
+//
 }
 add_action( 'customize_register', 'shenAleph_customize_register' );
 
